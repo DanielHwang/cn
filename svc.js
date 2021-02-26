@@ -22,11 +22,10 @@
         if (script.getAttribute.length !== undefined) {
             src = script.src;
         } else {
-            src = script.getAttribute('src', -1);
+            src = script.getAttribute('src') || "";
         }
         return src;
     }());
-
 
     function GetScriptHostname() {
         // Returns script protocol, hostname and port.
